@@ -1,0 +1,3 @@
+change the way dates are used
+	always use now() for post_history table
+	on post_history.asp, show post date range 
