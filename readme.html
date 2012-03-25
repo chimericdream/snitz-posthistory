@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<title>Snitz Forums MOD - Post History</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Bill Parrott" />
+	<meta name="robots" content="index,follow" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<script type="text/javascript">
+		//<![CDATA[
+		function loadChanges(strFile) {
+			var newInnerHTML = document.getElementById(strFile).innerHTML;
+			document.getElementById('installTxt').innerHTML = '';
+			document.getElementById('installTxt').innerHTML = newInnerHTML;
+		}
+		//]]>
+	</script>
+	<style type="text/css">
+		/*<![CDATA[*/
+		* {margin: 0; padding: 0; border: 0;}
+		.left {float: left;}
+		.right {float: right;}
+		.clear {clear: both;}
+		.rClear {clear: right;}
+		.lClear {clear: left;}
+		.note {font-size: 85%; font-style: italic;}
+
+		body {text-align: center; background-color: #404040;}
+		a:link {}
+		a:hover {}
+		a:visited {}
+		a:active {}
+		a.nolink {}
+		h1 {}
+		h2 {}
+		h3 {margin-top: 1em; border-bottom: 1px solid #8080a0;}
+		h4 {margin-top: 1em;}
+		p {text-indent: 2em;}
+
+		#wrapper {width: 750px; margin: 10px auto; text-align: left;}
+
+		#header {border: 1px solid #8080a0; border-width: 1px 1px 0 1px; text-align: center; padding: 15px; background-color: #8080a0;}
+
+		#globalNav {border: 1px solid #e0e0e0; border-width: 0 1px; background-color: #e0e0e0;}
+		#globalNav ul {list-style-type: none; margin-left: 25px;}
+		#globalNav ul li {float: left; display: block; width: 100px; text-align: center;}
+		/*#globalNav ul li a {display: block; width: 100%;}*/
+
+		#content {border: 1px solid #e0e0e0; border-width: 0 1px; padding: 15px; background-color: #e0e0e0;}
+
+		#descriptionDiv {}
+
+		#installationDiv {}
+		#installationDifficulty {text-align: center;}
+		#difficultyBar {}
+		#installTxt {background-color: #fff; width: 650px; margin: 1em 25px; border: 1px solid #8080a0; height: 375px; overflow: scroll; padding: 5px;}
+		#installTxt h4 {margin-top: 0;}
+		#installTxt .txtChanges {background-color: #e0e0e0; border: 1px solid #e0e0e0; width: 100%; height: 250px; overflow: scroll;}
+		.reqChange {color: #f00;}
+		.optChange {color: #0a0;}
+		#installationDiv ul, #installationDiv ol, #changelogDiv ul, #uninstallationDiv ol {margin-left: 2em;}
+
+		#upgradingDiv {}
+
+		#featuresDiv {}
+
+		#uninstallationDiv {}
+
+		#changelogDiv {}
+
+		#faqDiv {}
+
+		#footer {border: 1px solid #8080a0; border-width: 1px 1px 0 1px; text-align: center; padding: 15px; background-color: #8080a0;}
+
+		/* Hidden <div> elements containing the installation procedures */
+		#file1, #file2, #file3, #file4, #file5, #file6, #file7, #file8, #file9, #file10,
+		#file11, #file12, #file13, #file14, #file15, #file16, #file17, #file18, #file19, #file20 {height: 0px; width: 0px; display: none;}
+		/*]]>*/
+	</style>
+	<!--[if IE]>
+	<style type="text/css">
+		/*<![CDATA[*/
+
+		/*]]>*/
+	</style>
+	<![endif]-->
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<h1>Snitz Forums MOD - Post History</h1>
+		</div>
+		<div id="globalNav">
+			<ul>
+				<li><a href="#description" title="General overview"><span>Description</span></a></li>
+				<li><a href="#installation" title="Installation instructions"><span>Installation</span></a></li>
+				<!--<li><a href="#upgrading" title="Upgrading the MOD from an older version"><span>Upgrading</span></a></li>-->
+				<li><a href="#features" title="Instructions on how to use the MOD's features"><span>Features</span></a></li>
+				<li><a href="#uninstallation" title="How to uninstall the MOD"><span>Uninstallation</span></a></li>
+				<li><a href="#changelog" title="Changes made to the MOD from version to version"><span>Change Log</span></a></li>
+				<!--<li><a href="#faq" title="Frequently Asked Questions about this MOD"><span>FAQ</span></a></li>-->
+			</ul>
+			<br class="clear" />
+		</div>
+		<div id="content">
+			<h3><a name="description" class="nolink">Description</a></h3>
+			<div id="descriptionDiv">
+				<strong>Version:</strong> 0.6b<br />
+				<strong>Author:</strong> Bill Parrott (<a href="http://forum.snitz.com/forum/pop_profile.asp?mode=display&amp;id=32088" title="View my profile at the Snitz forums" onclick="return !window.open(this.href);">muzishun</a>)<br />
+				<strong>Forum Version:</strong> Snitz Forum 2000 v3.4.06<br />
+				<strong>Tested Databases:</strong> MS Access, MySQL<br />
+				<strong>Last Updated:</strong> 2/10/08<br />
+				<strong>Download Link:</strong> <a href="http://www.snitzbitz.com/mods/details.asp?Version=All&amp;mid=262" title="Download from SnitzBitz" onclick="return !window.open(this.href);">SnitzBitz</a><br />
+				<p id="descNotes">This MOD gives an admin the ability to view past versions of a post. Often times, users edit their responses, but there are times when being able to view the original post may be necessary. With this add-on, administrators can view all past versions of edited posts.</p>
+				<p id="descSupport">For support, please visit the <a href="http://forum.snitz.com/forum/forum.asp?FORUM_ID=94" title="MOD Implementation forum; please direct your questions here" onclick="return !window.open(this.href);">MOD Implementation</a> forum at the Snitz website.</p>
+			</div>
+			<h3><a name="installation" class="nolink">Installation</a></h3>
+			<div id="installationDiv">
+				<div id="installationDifficulty">
+					<strong>Installation Difficulty</strong><br />
+					<span id="difficultyBar">easy - - | - - X | - - - | - - - | - - hard</span>
+				</div>
+				<h4>Backup your files</h4>
+				<p>Before installing this mod, you should create backups of your database along with any files listed in the <strong>Changed Files</strong> list below. Changes that are required for the MOD are highlighted in <span class="reqChange">red</span>, while changes that are not required are highlighted in <span class="optChange">green</span>. Optional changes will be explained below the text box in which they occur.</p>
+				<p>If you have not made any changes to the files listed below in the <strong>Changed Files</strong> list, you can overwrite your current copies with the ones provided with this MOD.</p>
+				<h4>Add database table(s) and/or field(s)</h4>
+				<p>There is a dbs file included with this MOD that will add the associated database table(s) and/or field(s).</p>
+				<ol>
+					<li>Upload the dbs_post_history.asp file to your web server.</li>
+					<li>Go to <strong>Admin Options</strong>, then <strong>MOD Setup</strong>.</li>
+					<li>Select <strong>Post History 0.6b</strong> from the drop down list menu and click <strong>Submit</strong>.</li>
+				</ol>
+				<h4>New Files:</h4>
+				<span class="note">Upload these files to your main forum directory</span>
+				<ul>
+					<li>post_history.asp</li>
+				</ul>
+				<span class="note">Upload these files to your images directory</span>
+				<ul>
+					<li>icon_post_history.gif</li>
+				</ul>
+				<h4>Changed Files:</h4>
+				<ul>
+					<li><a href="javascript:loadChanges('file1');" title="View changes for this file">inc_iconfiles.asp</a></li>
+					<li><a href="javascript:loadChanges('file2');" title="View changes for this file">pop_delete.asp</a></li>
+					<li><a href="javascript:loadChanges('file3');" title="View changes for this file">post_info.asp</a></li>
+					<li><a href="javascript:loadChanges('file4');" title="View changes for this file">topic.asp</a></li>
+				</ul>
+				<h4>Installation Process</h4>
+				<div id="file1">
+					<h4>Installation instructions for: inc_iconfiles.asp</h4>
+					Find this block of code around lines 146-149:<br />
+<div class="txtChanges"><pre>
+Const strIconUrl = "icon_url.gif|16|16"
+Const strIconYahoo = "icon_yahoo.gif|16|15"
+
+function getCurrentIcon(fIconName,fAltText,fOtherTags)
+</pre></div><br />
+					Edit that block to look like this:<br />
+<div class="txtChanges"><pre>
+Const strIconUrl = "icon_url.gif|16|16"
+Const strIconYahoo = "icon_yahoo.gif|16|15"
+<span class="reqChange">Const strIconPostHistory = "icon_post_history.gif|16|16"</span>
+
+function getCurrentIcon(fIconName,fAltText,fOtherTags)
+</pre></div><br />
+				</div>
+				<div id="file2">
+					<h4>Installation instructions for: pop_delete.asp</h4>
+					Find this block of code around lines 429-460:<br />
+<div class="txtChanges"><pre>
+	case "DeleteCategory"
+		strEncodedPassword = sha256("" &amp; strPassword)
+		mLev = cLng(chkUser(strDBNTFUserName, strEncodedPassword,-1)) 
+		if mLev &gt; 0 then  '## is Member
+			if mLev = 4 then
+				delAr = split(Cat_ID, ",")
+				for i = 0 to ubound(delAr) 
+					'## Forum_SQL - Delete all replys in this category
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "REPLY "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					'## Forum_SQL - Delete all topics in this category
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "TOPICS "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					'## Forum_SQL - Delete all archived replys in this category
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "A_REPLY "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					'## Forum_SQL - Delete all archived topics in this category
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "A_TOPICS "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					'## Forum_SQL - Delete all moderators and Allowed Members of the forums in this category
+					set rs = Server.CreateObject("ADODB.Recordset")
+					strSql = "SELECT FORUM_ID "
+					strSql = strSql &amp; " FROM " &amp; strTablePrefix &amp; "FORUM "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+</pre></div><br />
+					Edit that block to look like this:<br />
+<div class="txtChanges"><pre>
+	case "DeleteCategory"
+		strEncodedPassword = sha256("" &amp; strPassword)
+		mLev = cLng(chkUser(strDBNTFUserName, strEncodedPassword,-1)) 
+		if mLev &gt; 0 then  '## is Member
+			if mLev = 4 then
+				delAr = split(Cat_ID, ",")
+				for i = 0 to ubound(delAr) 
+					<span class="reqChange">'## Forum_SQL - Delete all past history entries for replies to topics in this category
+					strSql = "SELECT REPLY_ID FROM " &amp; strTablePrefix &amp; "REPLY "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+					Set phRS = Server.CreateObject("ADODB.RecordSet")
+					phRS.Open strSql, my_Conn
+					Do
+						If phRS.EOF or phRS.BOF Then Exit Do
+						strSql = "DELETE FROM " &amp; strTablePrefix &amp; "POST_HISTORY "
+						strSql = strSql &amp; " WHERE R_ID = " &amp; phRS("REPLY_ID")
+
+						my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+					Loop
+					phRS.Close
+					Set phRS = Nothing</span>
+
+					'## Forum_SQL - Delete all replys in this category
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "REPLY "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					<span class="reqChange">'## Forum_SQL - Delete all past history entries for topics in this category
+					strSql = "SELECT TOPIC_ID FROM " &amp; strTablePrefix &amp; "TOPICS "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+					Set phRS = Server.CreateObject("ADODB.RecordSet")
+					phRS.Open strSql, my_Conn
+					Do
+						If phRS.EOF or phRS.BOF Then Exit Do
+						strSql = "DELETE FROM " &amp; strTablePrefix &amp; "POST_HISTORY "
+						strSql = strSql &amp; " WHERE T_ID = " &amp; phRS("TOPIC_ID")
+
+						my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+					Loop
+					phRS.Close
+					Set phRS = Nothing</span>
+
+					'## Forum_SQL - Delete all topics in this category
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "TOPICS "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					<span class="reqChange">'## Forum_SQL - Delete all past history entries for archived replies to topics in this category
+					strSql = "SELECT REPLY_ID FROM " &amp; strTablePrefix &amp; "A_REPLY "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+					Set phRS = Server.CreateObject("ADODB.RecordSet")
+					phRS.Open strSql, my_Conn
+					Do
+						If phRS.EOF or phRS.BOF Then Exit Do
+						strSql = "DELETE FROM " &amp; strTablePrefix &amp; "POST_HISTORY "
+						strSql = strSql &amp; " WHERE R_ID = " &amp; phRS("REPLY_ID")
+
+						my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+					Loop
+					phRS.Close
+					Set phRS = Nothing</span>
+
+					'## Forum_SQL - Delete all archived replys in this category
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "A_REPLY "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					<span class="reqChange">'## Forum_SQL - Delete all past history entries for archived topics in this category
+					strSql = "SELECT TOPIC_ID FROM " &amp; strTablePrefix &amp; "A_TOPICS "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+					Set phRS = Server.CreateObject("ADODB.RecordSet")
+					phRS.Open strSql, my_Conn
+					Do
+						If phRS.EOF or phRS.BOF Then Exit Do
+						strSql = "DELETE FROM " &amp; strTablePrefix &amp; "POST_HISTORY "
+						strSql = strSql &amp; " WHERE T_ID = " &amp; phRS("TOPIC_ID")
+
+						my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+					Loop
+					phRS.Close
+					Set phRS = Nothing</span>
+
+					'## Forum_SQL - Delete all archived topics in this category
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "A_TOPICS "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					'## Forum_SQL - Delete all moderators and Allowed Members of the forums in this category
+					set rs = Server.CreateObject("ADODB.Recordset")
+					strSql = "SELECT FORUM_ID "
+					strSql = strSql &amp; " FROM " &amp; strTablePrefix &amp; "FORUM "
+					strSql = strSql &amp; " WHERE CAT_ID = " &amp; cLng(delAr(i))
+</pre></div><br />
+					Next, find this block of code around lines 315-345:<br />
+<div class="txtChanges"><pre>
+	case "DeleteForum"
+		strEncodedPassword = sha256("" &amp; strPassword)
+		mLev = cLng(chkUser(strDBNTFUserName, strEncodedPassword,-1)) 
+		if mLev &gt; 0 then  '## is Member
+			if mLev = 4 then
+				delAr = split(Forum_ID, ",")
+				for i = 0 to ubound(delAr) 
+					'## Forum_SQL - Delete all replys in this forum
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "REPLY "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					'## Forum_SQL - Delete all topics in this forum
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "TOPICS "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					'## Forum_SQL - Delete all archived replys in this forum
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "A_REPLY "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					'## Forum_SQL - Delete all archived topics in this forum
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "A_TOPICS "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					'## Forum_SQL - Delete the moderators of this forum
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "MODERATOR "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+</pre></div><br />
+					Edit that block to look like this:<br />
+<div class="txtChanges"><pre>
+	case "DeleteForum"
+		strEncodedPassword = sha256("" &amp; strPassword)
+		mLev = cLng(chkUser(strDBNTFUserName, strEncodedPassword,-1)) 
+		if mLev &gt; 0 then  '## is Member
+			if mLev = 4 then
+				delAr = split(Forum_ID, ",")
+				for i = 0 to ubound(delAr) 
+					<span class="reqChange">'## Forum_SQL - Delete all past history entries for replies to topics in this forum
+					strSql = "SELECT REPLY_ID FROM " &amp; strTablePrefix &amp; "REPLY "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					Set phRS = Server.CreateObject("ADODB.RecordSet")
+					phRS.Open strSql, my_Conn
+					Do
+						If phRS.EOF or phRS.BOF Then Exit Do
+						strSql = "DELETE FROM " &amp; strTablePrefix &amp; "POST_HISTORY "
+						strSql = strSql &amp; " WHERE R_ID = " &amp; phRS("REPLY_ID")
+
+						my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+					Loop
+					phRS.Close
+					Set phRS = Nothing</span>
+
+					'## Forum_SQL - Delete all replys in this forum
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "REPLY "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					<span class="reqChange">'## Forum_SQL - Delete all past history entries for topics in this forum
+					strSql = "SELECT TOPIC_ID FROM " &amp; strTablePrefix &amp; "TOPICS "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					Set phRS = Server.CreateObject("ADODB.RecordSet")
+					phRS.Open strSql, my_Conn
+					Do
+						If phRS.EOF or phRS.BOF Then Exit Do
+						strSql = "DELETE FROM " &amp; strTablePrefix &amp; "POST_HISTORY "
+						strSql = strSql &amp; " WHERE T_ID = " &amp; phRS("TOPIC_ID")
+
+						my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+					Loop
+					phRS.Close
+					Set phRS = Nothing</span>
+
+					'## Forum_SQL - Delete all topics in this forum
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "TOPICS "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					<span class="reqChange">'## Forum_SQL - Delete all past history entries for archived replies to topics in this forum
+					strSql = "SELECT REPLY_ID FROM " &amp; strTablePrefix &amp; "A_REPLY "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					Set phRS = Server.CreateObject("ADODB.RecordSet")
+					phRS.Open strSql, my_Conn
+					Do
+						If phRS.EOF or phRS.BOF Then Exit Do
+						strSql = "DELETE FROM " &amp; strTablePrefix &amp; "POST_HISTORY "
+						strSql = strSql &amp; " WHERE R_ID = " &amp; phRS("REPLY_ID")
+
+						my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+					Loop
+					phRS.Close
+					Set phRS = Nothing</span>
+
+					'## Forum_SQL - Delete all archived replys in this forum
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "A_REPLY "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					<span class="reqChange">'## Forum_SQL - Delete all past history entries for archived topics in this forum
+					strSql = "SELECT TOPIC_ID FROM " &amp; strTablePrefix &amp; "A_TOPICS "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					Set phRS = Server.CreateObject("ADODB.RecordSet")
+					phRS.Open strSql, my_Conn
+					Do
+						If phRS.EOF or phRS.BOF Then Exit Do
+						strSql = "DELETE FROM " &amp; strTablePrefix &amp; "POST_HISTORY "
+						strSql = strSql &amp; " WHERE T_ID = " &amp; phRS("TOPIC_ID")
+
+						my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+					Loop
+					phRS.Close
+					Set phRS = Nothing</span>
+
+					'## Forum_SQL - Delete all archived topics in this forum
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "A_TOPICS "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					'## Forum_SQL - Delete the moderators of this forum
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "MODERATOR "
+					strSql = strSql &amp; " WHERE FORUM_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+</pre></div><br />
+					Next, find this block of code around lines 245-253:<br />
+<div class="txtChanges"><pre>
+					'## Forum_SQL - Delete the actual topics
+					strSql = "DELETE FROM " &amp; strActivePrefix &amp; "TOPICS "
+					strSql = strSql &amp; " WHERE TOPIC_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					'## Forum_SQL - Delete all replys related to the topics
+					strSql = "DELETE FROM " &amp; strActivePrefix &amp; "REPLY "
+					strSql = strSql &amp; " WHERE TOPIC_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+</pre></div><br />
+					Edit that block to look like this:<br />
+<div class="txtChanges"><pre>
+					'## Forum_SQL - Delete the actual topics
+					strSql = "DELETE FROM " &amp; strActivePrefix &amp; "TOPICS "
+					strSql = strSql &amp; " WHERE TOPIC_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					<span class="reqChange">'## Forum_SQL - Delete all past history entries for this topic
+					strSql = "DELETE FROM " &amp; strTablePrefix &amp; "POST_HISTORY "
+					strSql = strSql &amp; " WHERE T_ID = " &amp; cLng(delAr(i))
+	
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+					'## Forum_SQL - Delete all past history entries for replies to this topic
+					strSql = "SELECT REPLY_ID FROM " &amp; strActivePrefix &amp; "REPLY "
+					strSql = strSql &amp; " WHERE TOPIC_ID = " &amp; cLng(delAr(i))
+					Set phRS = Server.CreateObject("ADODB.RecordSet")
+					phRS.Open strSql, my_Conn
+					Do
+						If phRS.EOF or phRS.BOF Then Exit Do
+						strSql = "DELETE FROM " &amp; strTablePrefix &amp; "POST_HISTORY "
+						strSql = strSql &amp; " WHERE R_ID = " &amp; phRS("REPLY_ID")
+
+						my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+					Loop
+					phRS.Close
+					Set phRS = Nothing</span>
+
+					'## Forum_SQL - Delete all replys related to the topics
+					strSql = "DELETE FROM " &amp; strActivePrefix &amp; "REPLY "
+					strSql = strSql &amp; " WHERE TOPIC_ID = " &amp; cLng(delAr(i))
+					my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+</pre></div><br />
+					Next, find this block of code around lines 94-105:<br />
+<div class="txtChanges"><pre>
+				'## Forum_SQL - Delete reply
+				strSql = "DELETE FROM " &amp; strActivePrefix &amp; "REPLY "
+				strSql = strSql &amp; " WHERE REPLY_ID = " &amp; Reply_ID
+
+				my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+				'## Forum_SQL - Get last_post and last_post_author for Topic
+				strSql = "SELECT REPLY_ID, R_DATE, R_AUTHOR, R_STATUS"
+				strSql = strSql &amp; " FROM " &amp; strActivePrefix &amp; "REPLY "
+				strSql = strSql &amp; " WHERE TOPIC_ID = " &amp; Topic_ID &amp; " "
+				strSql = strSql &amp; " AND R_STATUS &lt;= 1 "
+				strSql = strSql &amp; " ORDER BY R_DATE DESC"
+</pre></div><br />
+					Edit that block to look like this:<br />
+<div class="txtChanges"><pre>
+				'## Forum_SQL - Delete reply
+				strSql = "DELETE FROM " &amp; strActivePrefix &amp; "REPLY "
+				strSql = strSql &amp; " WHERE REPLY_ID = " &amp; Reply_ID
+
+				my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords
+
+				<span class="reqChange">'## Forum_SQL - Delete all past history entries for this reply
+				strSql = "DELETE FROM " &amp; strTablePrefix &amp; "POST_HISTORY "
+				strSql = strSql &amp; " WHERE R_ID = " &amp; Reply_ID
+
+				my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords</span>
+
+				'## Forum_SQL - Get last_post and last_post_author for Topic
+				strSql = "SELECT REPLY_ID, R_DATE, R_AUTHOR, R_STATUS"
+				strSql = strSql &amp; " FROM " &amp; strActivePrefix &amp; "REPLY "
+				strSql = strSql &amp; " WHERE TOPIC_ID = " &amp; Topic_ID &amp; " "
+				strSql = strSql &amp; " AND R_STATUS &lt;= 1 "
+				strSql = strSql &amp; " ORDER BY R_DATE DESC"
+</pre></div><br />
+				</div>
+				<div id="file3">
+					<h4>Installation instructions for: post_info.asp</h4>
+					Find this block of code around lines 543-548:<br />
+<div class="txtChanges"><pre>
+		if Moderation = "Yes" and AutoApprove = "Yes" and Topic_UReplies &gt; 0 then
+			Go_Result "There was an error = The Topic you are attempting to move to an UnModerated Forum has UnModerated Replies&lt;br /&gt;Please either approve or delete them and then try again.", 0
+			Response.End
+		end if
+
+		'## Forum_SQL
+		strSql = "UPDATE " &amp; strActivePrefix &amp; "TOPICS "
+		strSql = strSql &amp; " SET T_MESSAGE = '" &amp; txtMessage &amp; "'"
+		strSql = strSql &amp; ", T_SUBJECT = '" &amp; txtSubject &amp; "'"
+		if blnTopicMoved then
+			strSql = strSql &amp; ", CAT_ID = " &amp; cLng(aryForum(0))
+			strSql = strSql &amp; ", FORUM_ID = " &amp; cLng(aryForum(1))
+			if AutoApprove = "Yes" then
+				strSql = strSql &amp; ", T_STATUS = 1 "
+			end if
+		end if
+</pre></div><br />
+					Edit that block to look like this:<br />
+<div class="txtChanges"><pre>
+		if Moderation = "Yes" and AutoApprove = "Yes" and Topic_UReplies &gt; 0 then
+			Go_Result "There was an error = The Topic you are attempting to move to an UnModerated Forum has UnModerated Replies&lt;br /&gt;Please either approve or delete them and then try again.", 0
+			Response.End
+		end if
+
+		<span class="reqChange">strSql = "SELECT TOPIC_ID, T_SUBJECT, T_MESSAGE, T_DATE, T_LAST_EDIT, T_LAST_EDITBY, T_AUTHOR FROM "
+		strSql = strSql &amp; strActivePrefix &amp; "TOPICS WHERE TOPIC_ID = " &amp; Topic_ID
+		Set phRS = Server.CreateObject("ADODB.RecordSet")
+		phRS.Open strSql, my_Conn
+
+		phTopicID = phRS("TOPIC_ID")
+		phTMessage = phRS("T_MESSAGE")
+		phTSubject = phRS("T_SUBJECT")
+		phTDate = phRS("T_LAST_EDIT")
+		If mlev = 4 then
+			phTDate = DateToStr(Now())
+		else
+			phTDate = phRS("T_LAST_EDIT")
+		end if
+		If phTDate = "" Or IsNull(phTDate) Then
+			phTDate = phRS("T_DATE")
+		End If
+		phTLastEditby = phRS("T_LAST_EDITBY")
+		If phTLastEditby = "" Or IsNull(phTLastEditby) Then
+			phTLastEditby = 0
+		End If
+		phTAuthor = phRS("T_AUTHOR")
+
+		phRS.Close
+		Set phRS = Nothing
+
+		strSql = "INSERT INTO " &amp; strTablePrefix &amp; "POST_HISTORY "
+		strSql = strSql &amp; "(T_ID, T_SUBJECT, P_MESSAGE, P_AUTHOR, P_LAST_EDITBY, P_DATE) VALUES "
+		strSql = strSql &amp; "(" &amp; phTopicID &amp; ", '" &amp; ChkString(phTSubject,"sqlstring") &amp; "', '" &amp; ChkString(phTMessage,"sqlstring") &amp; "', " &amp; phTAuthor &amp; ", " &amp; phTLastEditby &amp; ", '" &amp; phTDate &amp; "')"
+
+		my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords</span>
+
+		'## Forum_SQL
+		strSql = "UPDATE " &amp; strActivePrefix &amp; "TOPICS "
+		strSql = strSql &amp; " SET T_MESSAGE = '" &amp; txtMessage &amp; "'"
+		strSql = strSql &amp; ", T_SUBJECT = '" &amp; txtSubject &amp; "'"
+		if blnTopicMoved then
+			strSql = strSql &amp; ", CAT_ID = " &amp; cLng(aryForum(0))
+			strSql = strSql &amp; ", FORUM_ID = " &amp; cLng(aryForum(1))
+			if AutoApprove = "Yes" then
+				strSql = strSql &amp; ", T_STATUS = 1 "
+			end if
+		end if
+</pre></div><br />
+					Next, find this block of code around lines 357-368:<br />
+<div class="txtChanges"><pre>
+	if txtMessage = " " then 
+		Err_Msg = Err_Msg &amp; "&lt;li&gt;You Must Enter a Message for your Reply&lt;/li&gt;"
+	end if
+	if Err_Msg = "" then
+		'## Forum_SQL - Do DB Update
+		strSql = "UPDATE " &amp; strActivePrefix &amp; "REPLY "
+		strSql = strSql &amp; " SET R_MESSAGE = '" &amp; txtMessage &amp; "'"
+		if Request.Form("sig") = "yes" and strDSignatures = "1" then
+		 	strSql = strSql &amp; ", R_SIG = 1"
+		else
+			strSql = strSql &amp; ", R_SIG = 0"
+		end if
+</pre></div><br />
+					Edit that block to look like this:<br />
+<div class="txtChanges"><pre>
+	if txtMessage = " " then 
+		Err_Msg = Err_Msg &amp; "&lt;li&gt;You Must Enter a Message for your Reply&lt;/li&gt;"
+	end if
+	if Err_Msg = "" then
+		<span class="reqChange">strSql = "SELECT REPLY_ID, R_MESSAGE, R_DATE, R_LAST_EDIT, R_LAST_EDITBY, R_AUTHOR FROM "
+		strSql = strSql &amp; strActivePrefix &amp; "REPLY WHERE REPLY_ID = " &amp; Reply_ID
+		Set phRS = Server.CreateObject("ADODB.RecordSet")
+		phRS.Open strSql, my_Conn
+
+		phReplyID = phRS("REPLY_ID")
+		phRMessage = phRS("R_MESSAGE")
+		If mlev = 4 then
+			phRDate = DateToStr(Now())
+		else
+			phRDate = phRS("R_LAST_EDIT")
+		end if
+		If phRDate = "" Or IsNull(phRDate) Then
+			phRDate = phRS("R_DATE")
+		End If
+		phRLastEditby = phRS("R_LAST_EDITBY")
+		If phRLastEditby = "" Or IsNull(phRLastEditby) Then
+			phRLastEditby = 0
+		End If
+		phRAuthor = phRS("R_AUTHOR")
+
+		phRS.Close
+		Set phRS = Nothing
+
+		strSql = "INSERT INTO " &amp; strTablePrefix &amp; "POST_HISTORY "
+		strSql = strSql &amp; "(R_ID, P_MESSAGE, P_AUTHOR, P_LAST_EDITBY, P_DATE) VALUES "
+		strSql = strSql &amp; "(" &amp; phReplyID &amp; ", '" &amp; ChkString(phRMessage,"sqlstring") &amp; "', " &amp; phRAuthor &amp; ", " &amp; phRLastEditby &amp; ", '" &amp; phRDate &amp; "')"
+
+		my_Conn.Execute (strSql),,adCmdText + adExecuteNoRecords</span>
+		
+		'## Forum_SQL - Do DB Update
+		strSql = "UPDATE " &amp; strActivePrefix &amp; "REPLY "
+		strSql = strSql &amp; " SET R_MESSAGE = '" &amp; txtMessage &amp; "'"
+		if Request.Form("sig") = "yes" and strDSignatures = "1" then
+		 	strSql = strSql &amp; ", R_SIG = 1"
+		else
+			strSql = strSql &amp; ", R_SIG = 0"
+		end if
+</pre></div><br />
+				</div>
+				<div id="file4">
+					<h4>Installation instructions for: topic.asp</h4>
+					Find this block of code around lines 820-827:<br />
+<div class="txtChanges"><pre>
+	if (strYAHOO = "1") then
+		if Trim(Member_YAHOO) &lt;&gt; "" then
+			Response.Write	"                      &amp;nbsp;&lt;a href=""http://edit.yahoo.com/config/send_webmesg?.target=" &amp; ChkString(Member_YAHOO, "urlpath") &amp; "&amp;.src=pg"" target=""_blank""&gt;" &amp; getCurrentIcon(strIconYahoo,"Send " &amp; ChkString(Member_Name,"display") &amp; " a Yahoo! Message","align=""absmiddle"" hspace=""6""") &amp; "&lt;/a&gt;" &amp; vbNewLine
+		end if
+	end if
+	if ((Cat_Status &lt;&gt; 0 and Forum_Status &lt;&gt; 0 and Topic_Status = 1) or (AdminAllowed = 1 and Topic_Status &lt;= 1) and ArchiveView = "" ) then
+		Response.Write	"                      &amp;nbsp;&lt;a href=""post.asp?" &amp; ArchiveLink &amp; "method=TopicQuote&amp;TOPIC_ID=" &amp; Topic_ID &amp; "&amp;FORUM_ID=" &amp; Forum_ID &amp; """&gt;" &amp; getCurrentIcon(strIconReplyTopic,"Reply with Quote","align=""absmiddle"" hspace=""6""") &amp; "&lt;/a&gt;" &amp; vbNewLine
+	end if
+</pre></div><br />
+					Edit that block to look like this:<br />
+<div class="txtChanges"><pre>
+	if (strYAHOO = "1") then
+		if Trim(Member_YAHOO) &lt;&gt; "" then
+			Response.Write	"                      &amp;nbsp;&lt;a href=""http://edit.yahoo.com/config/send_webmesg?.target=" &amp; ChkString(Member_YAHOO, "urlpath") &amp; "&amp;.src=pg"" target=""_blank""&gt;" &amp; getCurrentIcon(strIconYahoo,"Send " &amp; ChkString(Member_Name,"display") &amp; " a Yahoo! Message","align=""absmiddle"" hspace=""6""") &amp; "&lt;/a&gt;" &amp; vbNewLine
+		end if
+	end if
+	<span class="reqChange">phSQL = "SELECT COUNT(*) AS EditCount FROM " &amp; strTablePrefix &amp; "POST_HISTORY WHERE T_ID = " &amp; Topic_ID
+	Set phRS = Server.CreateObject("ADODB.RecordSet")
+	phRS.Open phSQL, my_Conn
+	EditCount = phRS("EditCount")
+	phRS.Close
+	Set phRS = Nothing
+	if EditCount &lt;&gt; 0 then
+		if mlev = 4 or mlev = 3 then
+			Response.Write	"                      &amp;nbsp;&lt;a href=""post_history.asp?" &amp; ArchiveLink &amp; "T_ID=" &amp; Topic_ID &amp; """&gt;" &amp; getCurrentIcon(strIconPostHistory,"View Topic History","align=""absmiddle"" hspace=""6""") &amp; "&lt;/a&gt;" &amp; vbNewLine
+		end if
+	end if</span>
+	if ((Cat_Status &lt;&gt; 0 and Forum_Status &lt;&gt; 0 and Topic_Status = 1) or (AdminAllowed = 1 and Topic_Status &lt;= 1) and ArchiveView = "" ) then
+		Response.Write	"                      &amp;nbsp;&lt;a href=""post.asp?" &amp; ArchiveLink &amp; "method=TopicQuote&amp;TOPIC_ID=" &amp; Topic_ID &amp; "&amp;FORUM_ID=" &amp; Forum_ID &amp; """&gt;" &amp; getCurrentIcon(strIconReplyTopic,"Reply with Quote","align=""absmiddle"" hspace=""6""") &amp; "&lt;/a&gt;" &amp; vbNewLine
+	end if
+</pre></div><br />
+					Find this block of code around lines 617-624:<br />
+<div class="txtChanges"><pre>
+			if strYAHOO = "1" then
+				if Trim(Reply_MemberYAHOO) &lt;&gt; "" then
+					Response.Write	"                      &amp;nbsp;&lt;a href=""http://edit.yahoo.com/config/send_webmesg?.target=" &amp; ChkString(Reply_MemberYAHOO, "urlpath") &amp; "&amp;.src=pg"" target=""_blank""&gt;" &amp; getCurrentIcon(strIconYahoo,"Send " &amp; ChkString(Reply_MemberName,"display") &amp; " a Yahoo! Message","align=""absmiddle"" hspace=""6""") &amp; "&lt;/a&gt;" &amp; vbNewLine
+				end if
+			end if
+			if ((Cat_Status &lt;&gt; 0 and Forum_Status &lt;&gt; 0 and Topic_Status = 1) or (AdminAllowed = 1 and Topic_Status &lt;= 1)) and ArchiveView = "" then
+				Response.Write	"                      &amp;nbsp;&lt;a href=""post.asp?" &amp; ArchiveLink &amp; "method=ReplyQuote&amp;REPLY_ID=" &amp; Reply_ReplyID &amp; "&amp;TOPIC_ID=" &amp; Topic_ID &amp; "&amp;FORUM_ID=" &amp; Forum_ID &amp; """&gt;" &amp; getCurrentIcon(strIconReplyTopic,"Reply with Quote","align=""absmiddle"" hspace=""6""") &amp; "&lt;/a&gt;" &amp; vbNewLine
+			end if
+</pre></div><br />
+					Edit that block to look like this:<br />
+<div class="txtChanges"><pre>
+			if strYAHOO = "1" then
+				if Trim(Reply_MemberYAHOO) &lt;&gt; "" then
+					Response.Write	"                      &amp;nbsp;&lt;a href=""http://edit.yahoo.com/config/send_webmesg?.target=" &amp; ChkString(Reply_MemberYAHOO, "urlpath") &amp; "&amp;.src=pg"" target=""_blank""&gt;" &amp; getCurrentIcon(strIconYahoo,"Send " &amp; ChkString(Reply_MemberName,"display") &amp; " a Yahoo! Message","align=""absmiddle"" hspace=""6""") &amp; "&lt;/a&gt;" &amp; vbNewLine
+				end if
+			end if
+			<span class="reqChange">phSQL = "SELECT COUNT(*) AS EditCount FROM " &amp; strTablePrefix &amp; "POST_HISTORY WHERE R_ID = " &amp; Reply_ReplyID
+			Set phRS = Server.CreateObject("ADODB.RecordSet")
+			phRS.Open phSQL, my_Conn
+			EditCount = phRS("EditCount")
+			phRS.Close
+			Set phRS = Nothing
+			if EditCount &lt;&gt; 0 then
+				if mlev = 4 or mlev = 3 then
+					Response.Write	"                      &amp;nbsp;&lt;a href=""post_history.asp?" &amp; ArchiveLink &amp; "R_ID=" &amp; Reply_ReplyID &amp; """&gt;" &amp; getCurrentIcon(strIconPostHistory,"View Reply History","align=""absmiddle"" hspace=""6""") &amp; "&lt;/a&gt;" &amp; vbNewLine
+				end if
+			end if</span>
+			if ((Cat_Status &lt;&gt; 0 and Forum_Status &lt;&gt; 0 and Topic_Status = 1) or (AdminAllowed = 1 and Topic_Status &lt;= 1)) and ArchiveView = "" then
+				Response.Write	"                      &amp;nbsp;&lt;a href=""post.asp?" &amp; ArchiveLink &amp; "method=ReplyQuote&amp;REPLY_ID=" &amp; Reply_ReplyID &amp; "&amp;TOPIC_ID=" &amp; Topic_ID &amp; "&amp;FORUM_ID=" &amp; Forum_ID &amp; """&gt;" &amp; getCurrentIcon(strIconReplyTopic,"Reply with Quote","align=""absmiddle"" hspace=""6""") &amp; "&lt;/a&gt;" &amp; vbNewLine
+			end if
+</pre></div><br />
+				</div>
+				<div id="installTxt"></div>
+			</div>
+			<!--<h3><a name="upgrading" class="nolink">Upgrading</a></h3>
+			<div id="upgradingDiv">
+			</div>-->
+			<h3><a name="features" class="nolink">Features</a></h3>
+			<div id="featuresDiv">
+				<p>With this MOD installed, Admins and Moderators will see a clock icon corresponding to posts that have been edited. Clicking on this icon will take them to post_history.asp and display prior versions of that post, up to and including the current version.</p>
+			</div>
+			<h3><a name="uninstallation" class="nolink">Uninstallation</a></h3>
+			<div id="uninstallationDiv">
+				<h4>Restore using your backup files</h4>
+				<p>To uninstall this mod, replace your files with the backup files you created before installing the MOD. If you did not make backups, or you have added modifications to your forum since installing this MOD, you will need to manually undo all of the changes made in each file.</p>
+				<h4>Remove database table(s) and/or field(s)</h4>
+				<p>There is a dbs file included with this MOD that will remove the associated database table(s) and/or field(s).</p>
+				<ol>
+					<li>Upload the dbs_post_history_uninstall.asp file to your web server.</li>
+					<li>Go to <strong>Admin Options</strong>, then <strong>MOD Setup</strong>.</li>
+					<li>Select <strong>Post History 0.6b Uninstall</strong> from the drop down list menu and click <strong>Submit</strong>.</li>
+				</ol>
+			</div>
+			<h3><a name="changelog" class="nolink">Change Log</a></h3>
+			<div id="changelogDiv">
+				<h4>Version 0.6b (2/10/08)</h4>
+				<ul>
+					<li>Fixed bug in post_info.asp that was causing syntax errors in MySQL.</li>
+				</ul>
+				<em>Modified Files: </em> post_info.asp.<br />
+				<h4>Version 0.5b (2/7/08)</h4>
+				<ul>
+					<li>Beta Release</li>
+				</ul>
+				<em>Modified Files: </em> inc_iconfiles.asp, pop_delete.asp, post_info.asp, topic.asp.<br />
+				<!--<h4>Version x.x.x (Date)</h4>
+				<ul>
+					<li>Change 1</li>
+					<li>Change 2</li>
+					<li>Change 3</li>
+					<li>Change 4</li>
+					<li>Change 5</li>
+				</ul>
+				<em>Modified Files: </em> list of modified files.<br />-->
+			</div>
+			<!--<h3><a name="faq" class="nolink">FAQ</a></h3>
+			<div id="faqDiv">
+				<strong>Q: Question 1?</strong><br />
+				<strong>A:</strong> Answer 1.<br /><br />
+				<strong>Q: Question 2?</strong><br />
+				<strong>A:</strong> Answer 2.
+			</div>-->
+		</div>
+		<div id="footer">
+			&copy; 2007-08 Bill Parrott &amp; Chimeric Dream<br />
+		</div>
+	</div>
+</body>
+</html>

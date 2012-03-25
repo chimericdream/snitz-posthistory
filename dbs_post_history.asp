@@ -1,0 +1,12 @@
+Post History 0.6b
+[CREATE]
+POST_HISTORY
+H_ID
+T_ID#int#NULL#0
+T_SUBJECT#varchar(100)#NULL#
+R_ID#int#NULL#0
+P_MESSAGE#memo#NULL#
+P_AUTHOR#int#NULL#0
+P_LAST_EDITBY#int#NULL#0
+P_DATE#varchar(14)#NULL#
+[END]
